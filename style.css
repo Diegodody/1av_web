@@ -1,0 +1,46 @@
+
+*{
+
+margin: 0;
+padding: 0;
+border: none;
+outline: none;
+box-sizing: border-box;
+font-size: 100%;
+
+}
+
+p{
+color: #736B6B;
+}
+
+body {
+height: 100vh;
+box-sizing: border-box;
+background-color: #000000;
+color: #F6F6F6;
+
+}
+
+.main-banner1 {
+
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+
+}
+
+.main-banner4 {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+	
+}
+
+
+
+
+
+
