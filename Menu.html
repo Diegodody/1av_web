@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Comentários</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Notícias do Mundo</h1>
+        <nav class="menu">
+    <ul>
+        <li><a href="https://g1.globo.com/mundo/">G1 Globo</a></li>
+        <li><a href="https://www.cnnbrasil.com.br">CNN Brasil</a></li>
+        <li><a href="mailto:email@provedor.com.br?subject=Assunto do email&cc=copia@provedor.com.br&bcc=copiaoculta@provedor.com.br&body=Conteúdo do email que será preenchido automaticamente">Contato</a></li>
+    </ul>
+</nav>
+    </header>
+    
+    <section class="noticias">
+        <h2>Notíciario do G1 Globo</h2>
+         <a href="https://g1.globo.com/mundo/" target="_blank">
+        <img src="https://s2-g1.glbimg.com/29fccb_kO-0gUaal59-qtoKq2Mo=/540x304/top/smart/filters:max_age(3600)/https://s01.video.glbimg.com/deo/vi/37/76/12017637" alt="Descrição da Imagem">
+        <img src="https://s2.glbimg.com/AvNujR926cUL89zH4OXF4eDB6So=/540x304/top/smart/filters:max_age(3600)/https://s01.video.glbimg.com/deo/vi/37/59/11945937">
+        <img src="https://s2-g1.glbimg.com/f2-CjU16CmwUIHHJ0h1GhWRn3cc=/540x304/top/smart/filters:max_age(3600)/https://s01.video.glbimg.com/deo/vi/34/49/11814934"></a>
+
+    </section>
+    
+    <section class="noticias">
+        <h2>Notíciario da CNN Brasil</h2>
+       <a href="https://www.cnnbrasil.com.br/" target="_blank">
+        <img src="https://www.estadao.com.br/resizer/_FXyh8NFAi0etfiMyJqfPwhbilg=/arc-anglerfish-arc2-prod-estadao/public/KJXLPLEUXJBXFBZBCHHYXQCG5U.jpg" alt="Descrição da Imagem"> 
+        <img src="https://www.estadao.com.br/resizer/_FXyh8NFAi0etfiMyJqfPwhbilg=/arc-anglerfish-arc2-prod-estadao/public/KJXLPLEUXJBXFBZBCHHYXQCG5U.jpg" alt="Descrição da Imagem"> 
+        <img src="https://www.estadao.com.br/resizer/_FXyh8NFAi0etfiMyJqfPwhbilg=/arc-anglerfish-arc2-prod-estadao/public/KJXLPLEUXJBXFBZBCHHYXQCG5U.jpg" alt="Descrição da Imagem"> </a>
+
+    </section>
+
+    <section class="comentarios">
+        <h2>Comentários</h2>
+        <div class="comentario">
+            <h3>Pedro Wilson</h3>
+            <p>Muito triste com tudo isso =/.</p>
+        </div>
+
+        <div class="comentario">
+            <h3>Sandra almeida</h3>
+            <p>Estamos torcendo para que tudo der certo.</p>
+        </div>
+
+        <div class="comentario">
+            <h3>Alan Wilson</h3>
+            <p>Compartilhe mais notícias como esta, por favor.</p>
+        </div>
+
+        <!-- Formulário para adicionar um comentário -->
+        <form id="form-comentario">
+            <h3>Adicione seu comentário</h3>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="comentario">Comentário:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+    </section>
+</body>
+</html>

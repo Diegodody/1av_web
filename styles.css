@@ -1,0 +1,64 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo fora do campo de cadastro */
+    background-image: url('https://img.freepik.com/vetores-gratis/fundo-abstrato-azul-para-negocios_53876-100597.jpg?w=1380&t=st=1697160652~exp=1697161252~hmac=109699bb33e5c72c964f1c6ec9c3017c3f2d99cde8d358306154d92859fb9e9e'); /* URL da imagem de plano de fundo */
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o espaço disponível */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo seja repetida */
+    background-position: center center; /* Centraliza a imagem de fundo horizontal e verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+
+    padding: 110px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 110px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.button-container {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

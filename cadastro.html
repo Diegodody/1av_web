@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de usuário</h1>
+        <form action="Script_do_Formulario.php" method="post">
+            <!-- DADOS PESSOAIS-->
+            <fieldset>
+                <legend><b><h3>Dados Pessoais</h3></legend>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" id="telefone">
+                </div>
+                
+            </fieldset>
+
+            <!-- ENDEREÇO -->
+            <fieldset>
+    <legend><h3>Dados de Endereço</h3></legend>
+    <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" required>
+    </div>
+    <div class="form-group">
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" id="rua" required>
+    </div>
+    <div class="form-group">
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" id="numero" required>
+    </div>
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" required>
+    </div>
+    <div class="form-group">
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado" required>
+            <option value="">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+    </div>
+    <!-- Outros campos de endereço -->
+</fieldset>
+
+            <!-- DADOS DE LOGIN -->
+            <fieldset>
+                <legend><h3>Dados de Login</h3></legend>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagem">Imagem de perfil:</label>
+                    <input type="file" name="imagem" id="imagem">
+                </div>
+                <div class="form-group">
+                    <label for="login">Login de usuário:</label>
+                    <input type="text" name="login" id="login" required>
+                </div>
+                <div class="form-group">
+                    <label for="pass">Senha:</label>
+                    <input type="password" name="pass" id="pass" required>
+                </div>
+                <div class="form-group">
+                    <label for="passconfirm">Confirme a senha:</label>
+                    <input type="password" name="passconfirm" id="passconfirm" required>
+                </div>
+            </fieldset>
+
+            <div class="button-container">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+    <script>
+    const form = document.querySelector('form');
+    const mensagem = document.querySelector('#mensagem');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Verifique se todos os campos obrigatórios estão preenchidos
+        const camposObrigatorios = ['nome', 'sobrenome', 'cpf', 'cep', 'rua', 'numero', 'cidade', 'estado', 'email', 'login', 'pass', 'passconfirm'];
+        let camposFaltando = [];
+
+        camposObrigatorios.forEach(function (campo) {
+            const input = document.getElementById(campo);
+            if (!input.value) {
+                camposFaltando.push(input.previousElementSibling.textContent.replace(':', ''));
+            }
+        });
+
+        // Exiba mensagens apropriadas
+        if (camposFaltando.length > 0) {
+            mensagem.textContent = `Faltam campos a serem preenchidos: ${camposFaltando.join(', ')}`;
+        } else {
+            mensagem.textContent = 'Cadastro efetuado com sucesso!';
+            form.reset(); // Limpe o formulário após o envio bem-sucedido
+        }
+    });
+</script>
+</body>
+</html>

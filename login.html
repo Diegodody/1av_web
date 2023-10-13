@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça seu login</h1>
+        <form id="loginForm" action="javascript:void(0);" onsubmit="redirectMenu()">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" name="username" id="diego" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="teste" required>
+            </div>
+            <div class="button-container">
+                <input type="submit" value="Entrar">
+            </div>
+        </form>
+        <p>Ainda não tem uma conta? <a href="cadastro.html">Registrar</a></p>
+    </div>
+
+    <script>
+        function redirectMenu() {
+            // Aqui você pode adicionar a lógica de validação do login
+            // Se o login for válido, redirecione para a página "Menu.html"
+            // Se o login não for válido, mostre uma mensagem de erro
+
+            // Exemplo simples: redirecionar sempre após o envio do formulário
+            window.location.href = "Menu.html";
+        }
+    </script>
+</body>
+</html>
